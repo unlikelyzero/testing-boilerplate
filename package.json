@@ -1,0 +1,37 @@
+{
+  "name": "testing-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Test boilerplate / examples using protractor / Jest for node.js projects",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "webdriver-manager update",
+    "start-selenium": "webdriver-manager start --ignore_ssl",
+    "test": "npm run unit && npm run e2e",
+    "e2e": "standard && protractor config/protractor-conf.js",
+    "unit": "standard && DEBUG=session-cache-manager jest --verbose --config config/jest-conf.json --testNamePattern"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theogravity/testing-boilerplate.git"
+  },
+  "author": "Theo Gravity <theo@suteki.nu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theogravity/testing-boilerplate/issues"
+  },
+  "homepage": "https://github.com/theogravity/testing-boilerplate#readme",
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^19.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "jest-cli": "^19.0.2",
+    "protractor": "^5.1.1",
+    "standard": "^10.0.2"
+  }
+}

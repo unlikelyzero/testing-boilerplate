@@ -1,0 +1,6 @@
+{
+  "transform": {
+    ".js": "<rootDir>/node_modules/babel-jest"
+  },
+  "testRegex": "tests/unit/(.*).spec.js"
+}
