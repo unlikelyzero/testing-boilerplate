@@ -98,7 +98,6 @@ export default class GoogleSearchPage {
 // so we have a check function to wait for the element(s) to load
 // before we can say the page has actually been loaded
 async function checkHomepageLoaded () {
-  // the google search box has an input class of gsfi
   const sel = GoogleSearchPage.selectors.SEARCH_INPUT
   await getElementBySelector(sel, { timeout: 30000 })
   return true
