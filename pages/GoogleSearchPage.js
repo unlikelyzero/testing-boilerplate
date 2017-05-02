@@ -67,10 +67,6 @@ export default class GoogleSearchPage {
   async getSearchInputText () {
     const ele = await this.getSearchInputEle()
 
-    // http://www.protractortest.org/#/api?view=webdriver.WebElement.prototype.getText
-    // the API says it returns a promise, so we mark it with await
-    // when it resolves, we'll get a string back
-
     // because this is an input type, we need to use getAttribute() instead of getText()
     return ele.getAttribute('value')
   }
