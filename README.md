@@ -2,6 +2,8 @@
 
 Fully-documented boilerplate for testing that includes proper ESx + lint + jest + protractor support using page objects.
 
+The automation example tests the Google search page and results.
+
 ## Install
 
 Make sure Chrome is installed.
@@ -100,3 +102,7 @@ https://standardjs.com/
 - Page objects
 
 https://github.com/angular/protractor/blob/master/docs/page-objects.md
+
+- An overview of Javascript testing in 2017
+
+https://medium.com/powtoon-engineering/a-complete-guide-to-testing-javascript-in-2017-a217b4cd5a2a
