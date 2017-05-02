@@ -31,5 +31,6 @@ describe('Basic unit tests', () => {
 
     expect(obj.test, 'test the test property exists').toBeDefined()
     expect({ 'test': 123 }, 'test object equality').toEqual(obj)
+    done()
   })
 })
