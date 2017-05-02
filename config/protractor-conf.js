@@ -24,8 +24,13 @@ exports.config = {
     'browserName': 'chrome'
   },
   baseUrl: baseURL,
+  // Disable the use of the selenium-webdriver control flow - we don't need it as we're using
+  // async/await to call the API instead
+  // for more info - https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/promise.html
   SELENIUM_PROMISE_MANAGER: false,
   onPrepare: () => {
+    // by default, protractor is built for use with angular.js projects
+    // enabling this option allows us to use it in non-angular projects instead
     browser.ignoreSynchronization = true
   }
 }
