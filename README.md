@@ -1,8 +1,14 @@
 # testing-boilerplate
 
-Fully-documented boilerplate for testing that includes proper ESx + lint + jest + protractor support using page objects.
+Fully-documented boilerplate for testing that includes proper ESx + lint + jest + protractor support using page objects implemented via ES6 `class`.
 
 The automation example tests the Google search page and results.
+
+- Uses `async/await` instead of explicit `Promise` and disables the selenium webdriver's custom promise control-flow; actions and tests that use or return `Promise` should be super simple to read.
+- [ProtractorJS](http://www.protractortest.org) for automation tests.
+- [Jest](https://facebook.github.io/jest/) for unit tests.
+- ES6 + ESx features are enabled via `babel`.
+- [StandardJS](https://standardjs.com/) for code linting.
 
 ## Install
 
@@ -79,13 +85,9 @@ This is just a sample that's trying to consolidate everything into one area. Ide
 
 ## Literature
 
-- The Protractor API is used to write automation tests:
+- The Protractor API:
 
 http://www.protractortest.org/#/api
-
-- Unit tests use Jest
-
-https://facebook.github.io/jest/
 
 - Tests are written using the Jasmine API
 
@@ -94,10 +96,6 @@ https://jasmine.github.io/2.6/introduction.html
 - Javascript ES6 primer
 
 https://github.com/lukehoban/es6features
-
-- Standard JS (Code linter)
-
-https://standardjs.com/
 
 - Page objects
 
