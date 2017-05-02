@@ -16,11 +16,20 @@ describe('Basic unit tests', () => {
     })
 
     try {
-      expect(await p).toBe(true)
+      expect(await p, 'the promise is true').toBe(true)
       done()
     } catch (e) {
       console.error(e)
       done.fail()
     }
+  })
+  
+  it('should test an object', (done) => {
+    const obj = {
+     'test': 123 
+    }
+
+    expect(obj.test, 'test the test property exists').toBeDefined()
+    expect({ 'test': 123 }, 'test object equality').toEqual(obj)
   })
 })
